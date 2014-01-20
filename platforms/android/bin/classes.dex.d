@@ -8,4 +8,5 @@
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/bin/classes/com/phonegap/helloworld/R$string.class \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/bin/classes/com/phonegap/plugins/speech/SpeechRecognizer.class \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/bin/classes/com/phonegap/plugins/speech/LanguageDetailsChecker.class \
+/home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/bin/classes/com/borismus/webintent/WebIntent.class \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/bin/dexedLibs/classes-6ceb5674616bd051a8fecca57a46e2f7.jar \

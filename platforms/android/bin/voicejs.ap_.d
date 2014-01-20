@@ -104,7 +104,10 @@
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/spec/lib/jasmine-1.2.0/MIT.LICENSE \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/spec/lib/jasmine-1.2.0/jasmine.css \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/plugins/com.phonegap.plugins.speech \
+/home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/plugins/com.borismus.webintent \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/plugins/com.phonegap.plugins.speech/SpeechRecognizer.js \
+/home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/plugins/com.borismus.webintent/www \
+/home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/plugins/com.borismus.webintent/www/webintent.js \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/views/home.html \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib/angular \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib/angular.min.js \
