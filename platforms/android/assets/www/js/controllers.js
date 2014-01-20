@@ -2,21 +2,31 @@ var voiceControllers = angular.module('voiceApp.controllers', []);
 
 voiceControllers.controller("HomeCtrl", [
 
-	'$scope', 'voiceHandler',
+	'$scope', 'voiceHandler', 'commandHandler',
 
-	function($scope, $voice) {
+	function($scope, $voice, $cmd) {
 
-		console.log("home")
+		$scope.listen = function() {
 
-		document.addEventListener("deviceready", function(){
+			if(!$scope.deviceReady)
+				return;
 
 			$voice.startRecognition(function(err, txt) {
 
-				if(err)
-					console.error(err)
-				else
-					console.log(txt)
+				console.log(txt)
+
+				if(!$cmd.interpret(txt[0])) {
+					alert("Comando desconhecido")
+				}
 			})
+		}
+
+		document.addEventListener("deviceready", function(){
+
+			$scope.$apply(function(){
+				$scope.deviceReady = true;
+			})
+
 		}, true);
 
 		return null;

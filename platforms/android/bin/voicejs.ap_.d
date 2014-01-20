@@ -14,6 +14,7 @@
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/img \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/phonegap.js \
+/home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/dict \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/js \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/index.html \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/css \
@@ -29,6 +30,7 @@
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/views \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/img/logo.png \
+/home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/dict/pt_BR.js \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/js/app.js \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/js/services.js \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/js/controllers.js \
@@ -111,6 +113,7 @@
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/views/home.html \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib/angular \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib/angular.min.js \
+/home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib/string.js \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib/jquery.min.js \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib/angular/angular-touch.min.js \
 /home/luiseduardo14/Projects/pessoal/voicejs/platforms/android/assets/www/lib/angular/angular-facebook.js \

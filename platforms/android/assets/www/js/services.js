@@ -23,8 +23,6 @@ voiceServices.factory('voiceHandler', function(){
 
 		_this.currentCallback = fn;
 
-		console.log(window.cordova)
-
 		return window.cordova.exec(
 			_this.successCallback, 
 			_this.errorCallback, 
@@ -36,8 +34,6 @@ voiceServices.factory('voiceHandler', function(){
 
 	_this.successCallback = function(result) {
 
-		console.log("success")
-
 		if(_this.currentCallback)
 			_this.currentCallback(null, result)
 
@@ -45,8 +41,6 @@ voiceServices.factory('voiceHandler', function(){
 	}
 
 	_this.errorCallback = function(err) {
-
-		console.log("error")
 
 		if(_this.currentCallback)
 			_this.currentCallback(err, null)
@@ -59,4 +53,97 @@ voiceServices.factory('voiceHandler', function(){
 
 voiceServices.factory('intentHandler', function(){
 
+	var _this = this;
+	var _public = {};
+
+	_this.init = function(){
+		return _public;
+	}
+
+	_public.startActivity = function(addr, fn) {
+
+		return window.plugins.webintent.startActivity(
+
+			{
+				action: window.plugins.webintent.ACTION_VIEW,
+				url: addr
+			},
+
+			fn || function(){},
+			function() {
+				alert('Failed to open URL via Android Intent')
+			}
+		);
+	}
+
+	return _this.init();
 })
+
+voiceServices.factory('commandHandler', [
+
+	'voiceHandler', 'intentHandler',
+
+	function($voice, $intent){
+
+		var _this = this;
+		var _public = {};
+
+		_this.dict = window.dict;
+
+		_this.init = function(){
+			return _public;
+		}
+
+		_this.run = function(cmd, fn) {
+
+			fn = fn || function(){};
+
+			return $intent.startActivity(cmd, fn);
+		}
+
+		_this.format = function(input, params) {
+
+			if(toString.call(params) !== toString.call([]))
+				params = [params];
+
+			return (new String()).format.apply(input, params)
+		}
+
+		_public.getLanguage = function() {
+			return _this.dict.lang;
+		}
+
+		_public.interpret = function(str, fn) {
+
+			var map = _this.dict.commands;
+
+			for(var k in map) {
+
+				var exp = map[k].expressions;
+
+				for(var i = 0; i < exp.length; i++) {
+
+					var matches = sscanf(str, exp[i]);
+
+					if((matches && matches.length) || exp == str) {
+
+						if(matches.length && !matches[0])
+							continue;
+
+						console.log("Running '" + k + "' command");
+
+						var addr = _this.format(map[k].address, matches);
+
+						console.log("addr: " + addr)
+						_this.run(addr, fn)
+						return true;
+					}
+				}
+			}
+
+			return null;
+		}
+
+		return _this.init();
+	}
+])
